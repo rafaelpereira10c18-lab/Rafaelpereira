@@ -72,7 +72,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.25);
 }
 
 .hero-inner {
@@ -165,3 +165,51 @@ blockquote cite {
   text-align: center;
   font-size: 0.9rem;
 }
+
+#cv {
+    max-width: 60%;
+    margin: 1rem auto;
+    line-height: 1.6;
+}
+
+#cv h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 40px;
+    color: #222;
+}
+
+.cv-item {
+    margin-bottom: 20px;
+}
+
+.cv-item h3 {
+    color: #444;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+ul {
+    list-style: "✓ ";
+    padding-left: 20px;
+}
+.navbar .nav-link {
+    font-weight: 600;
+    color: #333;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #e63946;
+}
+
+/* Botão WhatsApp no menu */
+.navbar .btn.btn-danger {
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+/* Garantir que o brand fica à direita mesmo em layouts custom */
+@media (min-width: 992px) {
+    .navbar .navbar-brand { margin-left: 1rem; }
+}
+

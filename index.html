@@ -9,33 +9,51 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="logo-new.svg" type="image/svg+xml">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-<header class="site-header">
-    <div class="container nav">
-        <a class="brand" href="#top" aria-label="Início">
-            <img src="logo.svg" alt="Logo Rafael Pereira" width="36" height="36">
-            <span>Rafael Pereira</span>
-        </a>
-        <nav>
-            <a href="#sobre">Sobre</a>
-            <a href="#aulas">Aulas</a>
-            <a href="#testemunhos">Testemunhos</a>
-            <a href="#contacto">Contacto</a>
-            <a class="btn small" href="https://wa.me/351914830672?text=Olá! Gostava de saber mais sobre as aulas de guitarra.">WhatsApp</a>
-        </nav>
-    </div>
-</header>
 
+<header class="site-header sticky-top bg-white border-bottom">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <!-- BRAND à esquerda (sempre) -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Início">
+                <img src="logo-new.svg" alt="Logo Rafael Pereira" width="36" height="36" class="me-2">
+                <span class="d-none d-sm-inline">Rafael Pereira</span>
+            </a>
+
+            <!-- HAMBURGER à esquerda (ao lado do brand em mobile) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- MENU -->
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#aulas">Aulas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testemunhos">Testemunhos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="curriculum.html">Percurso</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-danger fw-semibold" href="https://wa.me/351914830672?text=Olá! Gostava de saber mais sobre as aulas de guitarra.">WhatsApp</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
 <main id="top">
     <!-- Hero -->
     <section class="hero-with-photo" style="background-image:url('rafael.jpg')">
         <div class="hero-overlay"></div>
         <div class="container hero-inner">
             <div class="hero-copy">
-                <h1>Aprende guitarra com <span class="badge">método e simplicidade</span> — no <span class="badge">Porto</span> ou online.</h1>
+                <h1>Aprende guitarra com método e simplicidade— no Porto ou online.</h1>
                 <p class="lead">Aulas personalizadas para todos os níveis, focadas nos teus objetivos — técnica, repertório, improvisação e leitura.</p>
                 <div class="cta-row">
                     <a href="https://wa.me/351914830672?text=Olá! Gostava de saber mais sobre as aulas de guitarra." class="btn">Falar no WhatsApp</a>
@@ -50,16 +68,12 @@
         <div class="container grid">
             <div>
                 <h2>Sobre o Rafael</h2>
-                <p>Rafael Pereira é licenciado em <strong>Guitarra Clássica</strong> e pós-graduado em <strong>Ensino</strong>. Apaixonado por música desde sempre, dedica-se a partilhar conhecimento e a ajudar cada aluno a evoluir de forma consistente.</p>
-                <p>Dá aulas a iniciantes e avançados, presenciais no Porto e online para qualquer lugar. Cada plano é adaptado ao teu objetivo: acordes, técnica, repertório, teoria prática e preparação para objetivos específicos.</p>
-            </div>
-            <div>
-                <h3>Abordagem</h3>
-                <ul>
-                    <li>Método claro, progressivo e motivador</li>
-                    <li>Repertório alinhado com os teus gostos</li>
-                    <li>Feedback direto e exercícios práticos</li>
-                </ul>
+                <p>Sou o <strong>Rafael Pereira</strong>, licenciado em <strong>Guitarra Clássica</strong> e pós-graduado em <strong>Ensino</strong>. </p>
+                <p>A música faz parte da minha vida desde sempre, e é com entusiasmo que partilho aquilo que aprendi ao longo do caminho.</p>
+                <br>
+                <p>Dou aulas de guitarra para todos os níveis — do primeiro acorde ao aperfeiçoamento técnico. </p>
+                <p>As aulas podem ser <strong>presenciais no Porto</strong> ou <strong>online</strong>, sempre adaptadas ao teu ritmo, estilo e objetivos: aprender as tuas músicas preferidas, melhorar a técnica, dominar a teoria prática ou preparar-te para exames e audições.</p>
+                <p>Cada aluno tem o seu percurso, e o meu papel é guiar-te passo a passo, com aulas personalizadas que respeitam o teu ritmo, os teus gostos e as tuas metas.</p>
             </div>
         </div>
     </section>
@@ -72,17 +86,10 @@
                 <div>
                     <h3>Presencial</h3>
                     <p>Porto (zona central). Horários flexíveis.</p>
-                    <p><em>Valores a combinar.</em></p>
                 </div>
                 <div>
                     <h3>Online</h3>
                     <p>Zoom/Meet, com material de apoio.</p>
-                    <p><em>Valores a combinar.</em></p>
-                </div>
-                <div>
-                    <h3>Pacotes Mensais</h3>
-                    <p>Planos de 4 aulas por mês.</p>
-                    <p><em>Valores a combinar.</em></p>
                 </div>
             </div>
         </div>
@@ -128,5 +135,7 @@
         <p>© 2025 Rafael Pereira. Todos os direitos reservados.</p>
     </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
