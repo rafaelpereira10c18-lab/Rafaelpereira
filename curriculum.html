@@ -37,6 +37,7 @@
                     <li class="nav-item"><a class="nav-link" href="index.html#aulas">Aulas</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#testemunhos">Testemunhos</a></li>
                     <li class="nav-item"><a class="nav-link" href="curriculum.html">Percurso</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Galeria</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contacto</a></li>
                     <li class="nav-item ms-lg-2">
                         <a class="btn btn-danger fw-semibold" href="https://wa.me/351914830672?text=Olá! Gostava de saber mais sobre as aulas de guitarra.">WhatsApp</a>
@@ -108,6 +109,22 @@
     </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Close navbar when clicking on a link
+    document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('.nav-link');
+        const navbarCollapse = document.querySelector('#mainNav');
+        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse, {toggle: false});
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth < 992) { // Only close if on mobile view
+                    bsCollapse.hide();
+                }
+            });
+        });
+    });
+</script>
 
 </body>
 </html>
