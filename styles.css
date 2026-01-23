@@ -29,13 +29,13 @@ ul {
   position: sticky;
   top: 0;
   z-index: 1000;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
 }
 
 .site-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -51,6 +51,99 @@ ul {
   color: white;
   padding: 6px 12px;
   border-radius: 4px;
+}
+
+/* Garantir alinhamento correto do navbar */
+.navbar {
+  padding: 0.5rem 0;
+  min-height: auto;
+}
+
+.navbar .container {
+  display: grid !important;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.navbar-brand {
+  grid-column: 1;
+  flex-shrink: 0;
+}
+
+.navbar-toggler {
+  grid-column: 3;
+  justify-self: end;
+}
+
+.navbar-collapse {
+  grid-column: 2 / 4;
+  justify-self: end;
+  flex-grow: 0 !important;
+  flex-shrink: 0;
+}
+
+.navbar-nav {
+  display: flex !important;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (min-width: 992px) {
+  .navbar .container {
+    grid-template-columns: auto 1fr;
+    gap: 0;
+  }
+  
+  .navbar-toggler {
+    display: none;
+  }
+  
+  .navbar-brand {
+    grid-column: 1;
+  }
+  
+  .navbar-collapse {
+    grid-column: 2;
+    justify-self: end;
+    margin-left: auto !important;
+    flex-grow: 0 !important;
+    flex-shrink: 0 !important;
+  }
+  
+  .navbar-nav.ms-auto {
+    margin-left: 0 !important;
+  }
+}
+
+/* Garantir que o botão não aumenta a altura do header */
+.navbar-nav .nav-item:last-child {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .navbar-nav {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    margin-top: 1rem;
+  }
+  
+  .navbar-nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .navbar-nav .nav-item {
+    width: 100%;
+  }
 }
 
 /* HERO */
@@ -206,16 +299,19 @@ ul {
     color: #e63946;
 }
 
-/* Botão WhatsApp no menu */
+/* Botão WhatsApp no menu - mais largo e menos alto */
 .navbar .btn.btn-danger {
-    padding: 6px 12px;
+    padding: 8px 20px;
     border-radius: 4px;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    display: inline-flex;
+    align-items: center;
+    height: auto;
+    margin: 0;
 }
 
-/* Garantir que o brand fica à direita mesmo em layouts custom */
-@media (min-width: 992px) {
-    .navbar .navbar-brand { margin-left: 1rem; }
-}
 
 /* GALERIA */
 .gallery .card {
